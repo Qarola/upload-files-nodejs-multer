@@ -1,16 +1,16 @@
-var createError = require("http-errors");
-var express = require("express");
+const createError = require("http-errors");
+const express = require("express");
 
-var session = require("express-session");
-var flash = require("connect-flash");
+const session = require("express-session");
+const flash = require("connect-flash");
 
-var path = require("path");
-var cookieParser = require("cookie-parser");
-var logger = require("morgan");
+const path = require("path");
+const cookieParser = require("cookie-parser");
+const logger = require("morgan");
 //En la aplicación Node.js-Express, si ha creado un nuevo archivo de rutas, debe definir las rutas en el archivo app.js.
-var fileuploadRouter = require("./routes/fileupload");
+const fileuploadRouter = require("./routes/fileupload");
 
-var app = express();
+const app = express();
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));

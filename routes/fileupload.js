@@ -1,8 +1,8 @@
-var express = require("express");
+const express = require("express");
 
-var multer = require("multer");
+const multer = require("multer");
 
-var router = express.Router();
+const router = express.Router();
 
 router.get("/", function (request, response, next) {
   response.render("fileupload", {
@@ -13,7 +13,7 @@ router.get("/", function (request, response, next) {
 /*  */
 //Ruta de post, primero tenemos que definir la configuración de carga de archivos multer.
 router.post("/", function (request, response, next) {
-  var storage = multer.diskStorage({
+  const storage = multer.diskStorage({
 	//En la configuración de carga de archivos múltiples, primero tenemos que definir los detalles del destino de carga de archivos.
     destination: function (request, file, callback) {
       callback(null, "./upload");
@@ -35,7 +35,7 @@ router.post("/", function (request, response, next) {
 
   //mostrar el archivo cargado
 // necesitamos almacenar el nombre del archivo cargado en el mensaje flash de la sesión, por lo que a continuación puede ver que, cuando la página web ha sido redirigida después de la carga del archivo, en ese momento tenemos almacenado el nombre del archivo cargado en el mensaje flash de la sesión. Y en las rutas de obtención, también tenemos que definir el mensaje flash de la sesión de paso al archivo de plantilla.
-  var upload = multer({ storage: storage }).single("pdfFile");
+  let upload = multer({ storage: storage }).single("pdfFile");
 
   upload(request, response, function (error) {
     if (error) {
