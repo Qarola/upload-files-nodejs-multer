@@ -6,7 +6,7 @@ var router = express.Router();
 
 router.get("/", function (request, response, next) {
   response.render("fileupload", {
-    title: "File Upload "/* in Node JS - Express using Multer" */,
+    title: "File Upload in Node JS - Express using Multer" ,
     file: request.flash("success"),
   });
 });
