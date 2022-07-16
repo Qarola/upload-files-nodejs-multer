@@ -19,11 +19,11 @@ router.post("/", function (request, response, next) {
       callback(null, "./upload");
     },
     filename: function (request, file, callback) {
-      var temp_file_arr = file.originalname.split(".");
+     const temp_file_arr = file.originalname.split(".");
 
-      var temp_file_name = temp_file_arr[0];
+      const temp_file_name = temp_file_arr[0];
 
-      var temp_file_extension = temp_file_arr[1];
+      const temp_file_extension = temp_file_arr[1];
 
       callback(
         null,
