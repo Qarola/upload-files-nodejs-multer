@@ -1,6 +1,6 @@
 ### File Upload in Node JS - Express using Multer
 
-![demo](upload-download-files-multer.mp4)
+![demo](https://upload-download-files-multer.mp4)
 
 
 ```sh
